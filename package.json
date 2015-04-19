@@ -1,0 +1,23 @@
+{
+  "name": "contactlistapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.12.1",
+    "express": "^4.12.1",
+    "mongojs": "^0.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alminin/contactlistapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/alminin/contactlistapp.git"
+}
