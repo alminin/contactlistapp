@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 //var db = mongojs('contactlist', ['contactlist']);
 var bodyParser = require('body-parser');
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 
 // Here we find an appropriate database to connect to, defaulting to
 // localhost if we don't find one.  
@@ -23,14 +23,13 @@ mongoose.connect(uristring, function (err, res) {
 });
 
 var clientSchema = new mongoose.Schema({
-	_id: ObjectId,
 	name: String,
 	company: String,
 	email: String,
 	phone: String
 });
 
-var Client = mongoose.model('Client', clientSchema);
+var Client = mongoose.model('contactlist', clientSchema);
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
@@ -54,10 +53,16 @@ app.post('/contactlist', function (req, res) {
 	/*db.contactlist.insert(req.body, function (err, doc) {
 		res.json(doc);
 	});*/
-	req.body.save(function (err, doc) {
+	var contact = new Client({
+		name: req.body.name,
+		company: req.body.company,
+		email: req.body.email,
+		phone: req.body.phone
+	})
+	contact.save(function (err, doc) {
 		if (err) console.log(err);
 		else {
-			console.log('Saved: ' + doc);
+			console.log('Saved: ' + doc + ' on ' + uristring);
 			res.json(doc);
 		}
 	});
@@ -69,7 +74,7 @@ app.delete('/contactlist/:id', function (req, res) {
 	/*db.contactlist.remove({_id: mongojs.ObjectId(id)}, function (err, doc) {
 		res.json(doc);
 	});*/
-	Client.remove({_id: mongoose.Types.ObjectId(id);}, function (err, doc) {
+	Client.remove({_id: mongoose.Types.ObjectId(id)}, function (err, doc) {
 		res.json(doc);
 	});
 });
@@ -80,7 +85,7 @@ app.get('/contactlist/:id', function (req, res) {
 	/*db.contactlist.findOne({_id: mongojs.ObjectId(id)}, function (err, doc) {
 		res.json(doc);
 	});*/
-	Client.findOne({_id: mongoose.Types.ObjectId(id);}, function (err, doc) {
+	Client.findOne({_id: mongoose.Types.ObjectId(id)}, function (err, doc) {
 		res.json(doc);
 	});
 });
