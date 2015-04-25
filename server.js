@@ -59,7 +59,7 @@ app.post('/contactlist', function (req, res) {
 		else {
 			console.log('Saved: ' + doc);
 			res.json(doc);
-		});
+		}
 	});
 });
 
