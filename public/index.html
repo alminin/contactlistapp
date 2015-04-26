@@ -18,7 +18,7 @@
 			<div class="col-sm-3">
 				<img src="/images/logo_nts_eng.png">
 			</div>
-			<div class="col-sm-5">
+			<div class="col-sm-5 text-center">
 				<h1>База клиентов<br>
 					<small>ЮФ "НТС Консалтинг"</small></h1>
 			</div>
@@ -28,7 +28,7 @@
                     	<span class="glyphicon glyphicon-warning-sign glyphicon-lg"></span>
                 	</div>
                 	<h4 class="text-warning">
-                    	Конфиденциально</h4>
+                    	Конфиденциально!</h4>
                 	<p>
                     	<small>Только для внутреннего использования сотрудниками ЮФ "НТС Консалтинг"</small>
                 	</p>
@@ -58,7 +58,7 @@
 					<td><input class="form-control" ng-model="contact.email"></td>
 					<td><input class="form-control" ng-model="contact.phone"></td>
 					<td><button class="btn btn-primary" ng-click="addContact()">
-							<span class="glyphicon glyphicon-save"></span>Добавить контакт</button></td>
+							<span class="glyphicon glyphicon-save"></span>&nbsp;Добавить контакт</button></td>
 					<td><button class="btn btn-info" ng-click="update()">
 						<span class="glyphicon glyphicon-refresh"></span>
 						Обновить</button></td>
@@ -71,9 +71,9 @@
 					<td>{{contact.email}}</td>
 					<td>{{contact.phone}}</td>
 					<td><button class="btn btn-danger" ng-click="remove(contact._id)">
-						<span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Удалить</button></td>
+						<span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить</button></td>
 					<td><button class="btn btn-warning" ng-click="edit(contact._id)">
-						<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Изменить</button></td>
+						<span class="glyphicon glyphicon-pencil"></span>&nbsp;Изменить</button></td>
 				</tr>
 			</tbody>		
 		</table>

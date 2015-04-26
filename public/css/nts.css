@@ -11,4 +11,4 @@
 .blockquote-box.blockquote-warning .square{background-color:#F0AD4E;color:#FFF}
 .blockquote-box.blockquote-danger{border-color:#D43F3A}
 .blockquote-box.blockquote-danger .square{background-color:#D9534F;color:#FFF}
-#head-divider {border-bottom: 3px solid #1075b6}
+#head-divider {border-bottom: 3px solid #1075b6; margin-bottom: 15px}
