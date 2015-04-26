@@ -25,10 +25,14 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th>Имя</th>
-					<th>Компания</th>
-					<th>Email</th>
-					<th>Телефон</th>
+					<th><span class="glyphicon glyphicon-user"></span>&nbsp;
+						Имя</th>
+					<th><span class="glyphicon glyphicon-briefcase"></span>&nbsp;
+						Компания</th>
+					<th><span class="glyphicon glyphicon-envelope"></span>&nbsp;
+						Email</th>
+					<th><span class="glyphicon glyphicon-phone"></span>&nbsp;
+						Телефон</th>
 					<th>&nbsp;</th>
 					<th>&nbsp;</th>
 				</tr>
@@ -39,17 +43,23 @@
 					<td><input class="form-control" ng-model="contact.company"></td>
 					<td><input class="form-control" ng-model="contact.email"></td>
 					<td><input class="form-control" ng-model="contact.phone"></td>
-					<td><button class="btn btn-primary" ng-click="addContact()">Добавить контакт</button></td>
-					<td><button class="btn btn-info" ng-click="update()">Обновить</button></td>
-					<td><button class="btn btn-info" ng-click="deselect()">Очистить</button></td>
+					<td><button class="btn btn-primary" ng-click="addContact()">
+							<span class="glyphicon glyphicon-save"></span>Добавить контакт</button></td>
+					<td><button class="btn btn-info" ng-click="update()">
+						<span class="glyphicon glyphicon-refresh"></span>
+						Обновить</button></td>
+					<td><button class="btn btn-info" ng-click="deselect()">
+						<span class="glyphicon glyphicon-erase"></span>&nbsp;Очистить</button></td>
 				</tr>
 				<tr ng-repeat="contact in contactlist">
 					<td>{{contact.name}}</td>
 					<td>{{contact.company}}</td>
 					<td>{{contact.email}}</td>
 					<td>{{contact.phone}}</td>
-					<td><button class="btn btn-danger" ng-click="remove(contact._id)">Удалить</button></td>
-					<td><button class="btn btn-warning" ng-click="edit(contact._id)">Изменить</button></td>
+					<td><button class="btn btn-danger" ng-click="remove(contact._id)">
+						<span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Удалить</button></td>
+					<td><button class="btn btn-warning" ng-click="edit(contact._id)">
+						<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Изменить</button></td>
 				</tr>
 			</tbody>		
 		</table>
