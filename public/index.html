@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <!-- Optional theme -->
@@ -10,8 +12,15 @@
 </head>
 <body>
 	<div class="container" ng-controller="AppCtrl">
-		<img src="/images/logo_nts_eng.png">
-		<h1>Список контактов клиентов</h1>
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="/images/logo_nts_eng.png">
+			</div>
+			<div class="col-sm-9">
+				<h1>База клиентов<small>Юридической фирмы НТС Консалтинг</small></h1>
+			</div>
+		</div>
+		<hr>
 
 		<table class="table table-striped">
 			<thead>
