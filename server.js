@@ -12,7 +12,8 @@ var port = process.env.PORT || 5000;
 var uristring = 
 process.env.MONGOLAB_URI || 
 process.env.MONGOHQ_URL ||
-'mongodb://localhost/contactlist';
+//'mongodb://localhost/contactlist'
+'mongodb://heroku_app36219449:U2y7qivt@ds063879.mongolab.com:63879/heroku_app36219449';
 
 mongoose.connect(uristring, function (err, res) {
 	if (err) {
